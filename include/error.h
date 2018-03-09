@@ -5,6 +5,8 @@
 #include "location.h"
 #include <wchar.h>
 
+#include "gherkin-c-port.h"
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -17,7 +19,7 @@ typedef struct Error {
 
 const Error* Error_new(const wchar_t* error_text, const Location location);
 
-void Error_delete(const Error* error);
+GHERKIN_C_API_ void Error_delete(const Error* error);
 
 #ifdef __cplusplus
 }

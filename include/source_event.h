@@ -1,6 +1,7 @@
 #ifndef GHERKIN_SOURCE_EVENT_H_
 #define GHERKIN_SOURCE_EVENT_H_
 
+#include "gherkin-c-port.h"
 #include "event.h"
 
 #include <wchar.h>
@@ -15,7 +16,7 @@ typedef struct SourceEvent {
     const wchar_t* source;
 } SourceEvent;
 
-SourceEvent* SourceEvent_new(const char* uri, const wchar_t* source);
+GHERKIN_C_API_ SourceEvent* SourceEvent_new(const char* uri, const wchar_t* source);
 
 #ifdef __cplusplus
 }

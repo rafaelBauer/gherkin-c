@@ -3,6 +3,7 @@
 
 #include <wchar.h>
 
+#include "gherkin-c-port.h"
 #include "event.h"
 #include "pickle.h"
 
@@ -16,7 +17,7 @@ typedef struct PickleEvent {
     const Pickle* pickle;
 } PickleEvent;
 
-const PickleEvent* PickleEvent_new(const char* uri, const Pickle* pickle);
+GHERKIN_C_API_ const PickleEvent* PickleEvent_new(const char* uri, const Pickle* pickle);
 
 #ifdef __cplusplus
 }
