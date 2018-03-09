@@ -2,6 +2,8 @@
 #define GHERKIN_TOKEN_MATCHER_H_
 
 #include <stdbool.h>
+
+#include "gherkin-c-port.h"
 #include "dialect.h"
 #include "error_list.h"
 #include "token.h"
@@ -40,9 +42,9 @@ struct TokenMatcher {
     match_function match_EOF;
 };
 
-TokenMatcher* TokenMatcher_new(const wchar_t* default_language);
+GHERKIN_C_API_ TokenMatcher* TokenMatcher_new(const wchar_t* default_language);
 
-void TokenMatcher_delete(TokenMatcher* token_matcher);
+GHERKIN_C_API_ void TokenMatcher_delete(TokenMatcher* token_matcher);
 
 #ifdef __cplusplus
 }

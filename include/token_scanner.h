@@ -3,6 +3,7 @@
 
 #include <wchar.h>
 
+#include "gherkin-c-port.h"
 #include "token.h"
 
 #ifdef __cplusplus
@@ -20,7 +21,7 @@ struct TokenScanner {
     delete_function del;
 };
 
-void TokenScanner_delete(TokenScanner* token_scanner);
+GHERKIN_C_API_ void TokenScanner_delete(TokenScanner* token_scanner);
 
 #ifdef __cplusplus
 }

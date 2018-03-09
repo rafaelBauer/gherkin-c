@@ -2,6 +2,7 @@
 #define GHERKIN_EVENT_H_
 
 #include <stdio.h>
+#include "gherkin-c-port.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -26,9 +27,9 @@ struct Event {
     EventType event_type;
 };
 
-void Event_delete(const Event* event);
+GHERKIN_C_API_ void Event_delete(const Event* event);
 
-void Event_print(const Event* event, FILE* file);
+GHERKIN_C_API_ void Event_print(const Event* event, FILE* file);
 
 #ifdef __cplusplus
 }
