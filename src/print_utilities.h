@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <wchar.h>
+#include "gherkin-c-port.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -10,7 +11,7 @@ extern "C" {
 
 void PrintUtilities_print_json_string(FILE* file, const wchar_t* text);
 
-void PrintUtilities_print_wide_string(FILE* file, const wchar_t* text);
+GHERKIN_C_API_ void PrintUtilities_print_wide_string(FILE* file, const wchar_t* text);
 
 #ifdef __cplusplus
 }

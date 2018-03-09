@@ -2,6 +2,7 @@
 #define GHERKIN_TOKEN_H_
 
 #include <wchar.h>
+#include "gherkin-c-port.h"
 #include "item.h"
 #include "location.h"
 #include "gherkin_line.h"
@@ -42,7 +43,7 @@ typedef struct Token {
 
 Token* Token_new(const GherkinLine* gherkin_line, int line);
 
-void Token_delete(Token* token);
+GHERKIN_C_API_ void Token_delete(Token* token);
 
 void Token_delete_matched_items(const Items* items);
 
