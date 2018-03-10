@@ -3,13 +3,14 @@
 
 #include <wchar.h>
 
+#include "gherkin-c-port.h"
 #include "token_scanner.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-TokenScanner* FileTokenScanner_new(const char* const file_name);
+GHERKIN_C_API_ TokenScanner* FileTokenScanner_new(const char* const file_name);
 
 #ifdef __cplusplus
 }

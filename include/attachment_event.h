@@ -3,6 +3,7 @@
 
 #include <wchar.h>
 
+#include "gherkin-c-port.h"
 #include "event.h"
 #include "error.h"
 
@@ -17,9 +18,10 @@ typedef struct AttachmentEvent {
     const wchar_t* data;
 } AttachmentEvent;
 
-AttachmentEvent* AttachmentEvent_new(const char* uri, const Location location);
+GHERKIN_C_API_ AttachmentEvent* AttachmentEvent_new(const char* uri, const Location location);
 
-void AttacnmentEvent_transfer_error_text(AttachmentEvent* attachment_event, Error* error);
+// TODO correct tipo
+GHERKIN_C_API_ void AttacnmentEvent_transfer_error_text(AttachmentEvent* attachment_event, Error* error);
 
 #ifdef __cplusplus
 }
