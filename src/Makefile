@@ -3,7 +3,6 @@ CLANG_FLAGS=-c -Wall -Werror -g -fPIC
 GCC_SO_FLAGS=-shared
 MINGW_FLAGS=-c -Wall -Werror -g 
 
-
 ifeq ($(CC),i686-w64-mingw32-gcc)
 	CC=i686-w64-mingw32-gcc
 	LD=i686-w64-mingw32-gcc
