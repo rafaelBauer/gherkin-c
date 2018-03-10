@@ -114,7 +114,7 @@ install(
   EXPORT ${targets_export_name}
   ARCHIVE DESTINATION ${lib_install_dir}
   LIBRARY DESTINATION ${lib_install_dir}
-  RUNTIME DESTINATION ${lib_install_dir}
+  RUNTIME DESTINATION ${bin_install_dir}
   INCLUDES DESTINATION ${include_install_dir})
 
 install(
@@ -122,14 +122,14 @@ install(
   DESTINATION ${include_install_dir}
   FILES_MATCHING PATTERN "*.*h")
 
-install(
-    FILES "${project_config}"
-    DESTINATION "${config_install_dir}")
+#install(
+#    FILES "${project_config}"
+#    DESTINATION "${config_install_dir}")
 
-install(
-    EXPORT "${targets_export_name}"
-    NAMESPACE "${namespace}"
-    DESTINATION "${config_install_dir}")
+#install(
+#    EXPORT "${targets_export_name}"
+#    NAMESPACE "${namespace}"
+#    DESTINATION "${config_install_dir}")
 
 add_custom_target(install_${PROJECT_NAME}
         $(MAKE) install
