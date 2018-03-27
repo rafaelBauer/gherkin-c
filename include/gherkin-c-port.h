@@ -9,7 +9,7 @@
 #    endif
 #elif __GNUC__ >= 4 || defined(__clang__)
 #    define GHERKIN_C_API_ __attribute__((visibility ("default")))
-#elif
+#else
 #    define GHERKIN_C_API_
 #endif
 
