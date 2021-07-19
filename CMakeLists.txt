@@ -132,6 +132,6 @@ install(
 #    DESTINATION "${config_install_dir}")
 
 add_custom_target(install_${PROJECT_NAME}
-        $(MAKE) install
+        ${CMAKE_MAKE_PROGRAM} install
         DEPENDS gherkin
         COMMENT "Installing ${PROJECT_NAME}")
