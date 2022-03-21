@@ -4,6 +4,16 @@ cmake_minimum_required(VERSION 3.0)
 option(BUILD_GHERKIN_TESTS "Build all of gherkin's own tests." OFF)
 option(BUILD_SHARED_LIBS "Build shared library." OFF)
 
+if(MSVC AND NOT BUILD_SHARED_LIBS)
+  add_compile_options(/EHsc)
+  # See https://gitlab.kitware.com/cmake/cmake/-/issues/18390
+  add_compile_options(
+          $<$<CONFIG:>:/MT>
+          $<$<CONFIG:Debug>:/MTd>
+          $<$<CONFIG:Release>:/MT>
+  )
+endif(MSVC AND NOT BUILD_SHARED_LIBS)
+
 # Install library & headers in your directory
 #SET(CMAKE_INSTALL_PREFIX  "")
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
